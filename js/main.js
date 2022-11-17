@@ -33,7 +33,7 @@ const search = (leak, charCounter) => {
 };
 
 function exploit() {
-	search("B", 0);
+	search("HTB{", 0);
 }
 
 exploit();
