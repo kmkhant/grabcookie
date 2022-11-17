@@ -2,7 +2,7 @@ var chars =
 	"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"$'()+,-./:;<=>?@[\\]^`{|}_";
 var charLen = chars.length;
 var ENDPOINT =
-	"http://161.35.173.232:31604/api/entries/search?q=";
+	"http://127.0.0.1:31604/api/entries/search?q=";
 
 const search = (leak, charCounter) => {
 	// Check if the character is valid
