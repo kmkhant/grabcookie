@@ -4,7 +4,7 @@ var chars =
 var special = "_";
 var charLen = chars.length;
 var ENDPOINT =
-	"http://161.35.173.232:30753/api/entries/search?q=";
+	"http://127.0.0.1:30753/api/entries/search?q=";
 
 var flag = "HTB{";
 
